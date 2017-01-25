@@ -11,7 +11,7 @@ import Firebase
 
 class LoginVC: UIViewController {
     
-    
+    // MARK: - IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -20,21 +20,29 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func loginButtonAction(_ sender: UIButton) {
-        
+        // Checks if the text fields are empty
         guard emailTextField.text?.isEmpty == false, passwordTextField.text?.isEmpty == false else {
             return
         }
         
+        // Logins in with the user email and password
+        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            // If there is an error
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                // Instantiate the main view controller
+                self.instantiateViewController(file: "Main", identifier: "MainVC")
+            }
+            
+        })
+        
     }
     
     @IBAction func signUpButtonAction(_ sender: UIButton) {
-        
+        // Instantiate the main view controller
+        self.instantiateViewController(file: "Entry", identifier: "SignUpVC")
     }
 }
 

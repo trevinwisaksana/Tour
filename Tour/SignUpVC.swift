@@ -30,7 +30,7 @@ class SignUpVC: UIViewController {
         let storage = FIRStorage.storage().reference(forURL: storageReference)
         // Creating a new folder in our Firebase storage called users
         userStorage = storage.child("users")
-        databaseReference = databaseReference.database.reference()
+        databaseReference = FIRDatabase.database().reference()
     }
     
     @IBAction func signUpButtonAction(_ sender: UIButton) {
@@ -52,7 +52,13 @@ class SignUpVC: UIViewController {
                     let userInfo: [String: Any] = ["uid" : user.uid,
                                                    "name" : self.nameTextField.text!,
                                                    "email" : self.emailTextField.text!]
+                    // 1. Database refernece is going to go to the "users" folder
+                    // 2. Databse reference then goes to the unique user ID
+                    // 3. Sets the values of the user info within the unique user ID
+                    self.databaseReference.child("users").child(user.uid).setValue(userInfo)
                     
+                    // Instantiate view controller as the creating the new user succeeds
+                    self.instantiateViewController(file: "Main", identifier: "MainVC")
                 }
             })
             

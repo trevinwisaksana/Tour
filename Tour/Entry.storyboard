@@ -66,7 +66,7 @@
         <!--Sign UpVC-->
         <scene sceneID="i4s-N9-oVg">
             <objects>
-                <viewController id="AmO-uF-tz6" customClass="SignUpVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" id="AmO-uF-tz6" customClass="SignUpVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mY3-ZZ-iEr"/>
                         <viewControllerLayoutGuide type="bottom" id="gMw-jL-CJd"/>

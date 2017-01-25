@@ -18,6 +18,9 @@
 		DDB19D921E3870B200572212 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDB19D911E3870B200572212 /* GoogleService-Info.plist */; };
 		DDB19D941E38714C00572212 /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19D931E38714C00572212 /* Entry.storyboard */; };
 		DDB19D961E38731D00572212 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D951E38731D00572212 /* SignUpVC.swift */; };
+		DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */; };
+		DDB19D9B1E38847300572212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19D9A1E38847300572212 /* Main.storyboard */; };
+		DDB19D9D1E38853200572212 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D9C1E38853200572212 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		DDB19D911E3870B200572212 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDB19D931E38714C00572212 /* Entry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
 		DDB19D951E38731D00572212 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+InstantiateVC.swift"; sourceTree = "<group>"; };
+		DDB19D9A1E38847300572212 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DDB19D9C1E38853200572212 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		EDE546BF86E72A5130C69D24 /* Pods_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,7 @@
 		DDB19D691E386A0700572212 /* Tour */ = {
 			isa = PBXGroup;
 			children = (
+				DDB19D971E38811800572212 /* Extensions */,
 				DDB19D901E38700A00572212 /* Designables */,
 				DDB19D8F1E38700300572212 /* Storyboards */,
 				DDB19D8E1E386FFD00572212 /* View Controllers (VC) */,
@@ -150,6 +157,7 @@
 			children = (
 				DDB19D6C1E386A0700572212 /* LoginVC.swift */,
 				DDB19D951E38731D00572212 /* SignUpVC.swift */,
+				DDB19D9C1E38853200572212 /* MainVC.swift */,
 			);
 			name = "View Controllers (VC)";
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB19D931E38714C00572212 /* Entry.storyboard */,
+				DDB19D9A1E38847300572212 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -167,6 +176,14 @@
 			children = (
 			);
 			name = Designables;
+			sourceTree = "<group>";
+		};
+		DDB19D971E38811800572212 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB19D781E386A0700572212 /* LaunchScreen.storyboard in Resources */,
+				DDB19D9B1E38847300572212 /* Main.storyboard in Resources */,
 				DDB19D921E3870B200572212 /* GoogleService-Info.plist in Resources */,
 				DDB19D941E38714C00572212 /* Entry.storyboard in Resources */,
 				DDB19D751E386A0700572212 /* Assets.xcassets in Resources */,
@@ -374,10 +392,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB19D9D1E38853200572212 /* MainVC.swift in Sources */,
 				DDB19D731E386A0700572212 /* Tour.xcdatamodeld in Sources */,
 				DDB19D6D1E386A0700572212 /* LoginVC.swift in Sources */,
 				DDB19D961E38731D00572212 /* SignUpVC.swift in Sources */,
 				DDB19D6B1E386A0700572212 /* AppDelegate.swift in Sources */,
+				DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
