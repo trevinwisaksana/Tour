@@ -30,11 +30,15 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
     
     // MARK: - Flow Layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width * 0.9, height: 300)
+        // Size of the cell
+        return CGSize(width: self.view.frame.width, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(5)
+        // Spacing between the cells
+        return CGFloat(0)
     }
+    
+    
     
 }

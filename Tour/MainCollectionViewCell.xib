@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRv-WC-t9q" customClass="DesignableView" customModule="Tour" customModuleProvider="target">
-                        <rect key="frame" x="10.5" y="9.5" width="392" height="174"/>
+                        <rect key="frame" x="0.0" y="2" width="413" height="189"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ofK-UL-fOn">
-                                <rect key="frame" x="25.5" y="20" width="263" height="26.5"/>
+                                <rect key="frame" x="25.5" y="20.5" width="263" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="263" id="EDc-as-uth"/>
                                 </constraints>
@@ -50,9 +50,9 @@
             </view>
             <constraints>
                 <constraint firstItem="bRv-WC-t9q" firstAttribute="centerY" secondItem="xNh-qW-02T" secondAttribute="centerY" id="96i-04-5rh"/>
-                <constraint firstItem="bRv-WC-t9q" firstAttribute="width" secondItem="xNh-qW-02T" secondAttribute="width" multiplier="0.95" id="Slj-xu-fZR"/>
+                <constraint firstItem="bRv-WC-t9q" firstAttribute="width" secondItem="xNh-qW-02T" secondAttribute="width" id="Slj-xu-fZR"/>
                 <constraint firstItem="bRv-WC-t9q" firstAttribute="centerX" secondItem="xNh-qW-02T" secondAttribute="centerX" id="dyo-RJ-IFw"/>
-                <constraint firstItem="bRv-WC-t9q" firstAttribute="height" secondItem="xNh-qW-02T" secondAttribute="height" multiplier="0.9" id="xjN-ps-VNg"/>
+                <constraint firstItem="bRv-WC-t9q" firstAttribute="height" secondItem="xNh-qW-02T" secondAttribute="height" multiplier="0.98" id="xjN-ps-VNg"/>
             </constraints>
             <size key="customSize" width="413" height="193"/>
             <connections>
