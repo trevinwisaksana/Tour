@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class LoginVC: UIViewController {
     
@@ -27,13 +27,13 @@ class LoginVC: UIViewController {
         }
         
         // Logins in with the user email and password
-        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { [weak self](user, error) in
             // If there is an error
             if let error = error {
                 print(error.localizedDescription)
             } else {
                 // Instantiate the main view controller
-                self.instantiateViewController(file: "Main", identifier: "MainVC")
+                self?.instantiateViewController(file: "Main", identifier: "MainVC")
             }
             
         })

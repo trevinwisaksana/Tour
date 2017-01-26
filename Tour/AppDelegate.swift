@@ -15,10 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure() // Necessary setup for Firebase
+        
+        // Auto transition to the app's main view
+        if let _ = FIRAuth.auth()?.currentUser {
+            // Instantiate the main view controller
+            let mainViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
+            // Presenting view controller
+            self.window?.rootViewController?.present(mainViewController, animated: true, completion: nil)
+        }
         return true
     }
 

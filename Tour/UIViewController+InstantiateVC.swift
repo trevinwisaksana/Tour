@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     
     func instantiateViewController(file name: String, identifier: String) {
-        // Instantiate the main view controller
+        // Instantiate view controller
         let viewController = UIStoryboard.init(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
         self.present(viewController, animated: true, completion: nil)
     }

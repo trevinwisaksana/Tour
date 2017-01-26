@@ -21,6 +21,11 @@
 		DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */; };
 		DDB19D9B1E38847300572212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19D9A1E38847300572212 /* Main.storyboard */; };
 		DDB19D9D1E38853200572212 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D9C1E38853200572212 /* MainVC.swift */; };
+		DDB19D9F1E391D3500572212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D9E1E391D3500572212 /* MainView.swift */; };
+		DDB19DA21E391DFC00572212 /* MainVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */; };
+		DDB19DA41E391E8800572212 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */; };
+		DDB19DA61E391F1F00572212 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */; };
+		DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA71E3934C000572212 /* DesignableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,12 @@
 		DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+InstantiateVC.swift"; sourceTree = "<group>"; };
 		DDB19D9A1E38847300572212 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DDB19D9C1E38853200572212 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		DDB19D9E1E391D3500572212 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+CollectionView.swift"; sourceTree = "<group>"; };
+		DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		DDB19DA71E3934C000572212 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		DDB19DAC1E39C1F900572212 /* Tour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tour.entitlements; sourceTree = "<group>"; };
 		EDE546BF86E72A5130C69D24 /* Pods_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,14 +132,14 @@
 		DDB19D691E386A0700572212 /* Tour */ = {
 			isa = PBXGroup;
 			children = (
-				DDB19D971E38811800572212 /* Extensions */,
+				DDB19DAC1E39C1F900572212 /* Tour.entitlements */,
 				DDB19D901E38700A00572212 /* Designables */,
-				DDB19D8F1E38700300572212 /* Storyboards */,
+				DDB19D971E38811800572212 /* Extensions */,
 				DDB19D8E1E386FFD00572212 /* View Controllers (VC) */,
 				DDB19D8D1E386FF700572212 /* Views */,
+				DDB19D8F1E38700300572212 /* Storyboards */,
 				DDB19D6A1E386A0700572212 /* AppDelegate.swift */,
 				DDB19D741E386A0700572212 /* Assets.xcassets */,
-				DDB19D761E386A0700572212 /* LaunchScreen.storyboard */,
 				DDB19D791E386A0700572212 /* Info.plist */,
 				DDB19D711E386A0700572212 /* Tour.xcdatamodeld */,
 				DDB19D911E3870B200572212 /* GoogleService-Info.plist */,
@@ -148,6 +159,8 @@
 		DDB19D8D1E386FF700572212 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DDB19DAB1E39B71E00572212 /* MainView */,
+				DDB19DA91E39B70800572212 /* CollectionViewCells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -157,7 +170,7 @@
 			children = (
 				DDB19D6C1E386A0700572212 /* LoginVC.swift */,
 				DDB19D951E38731D00572212 /* SignUpVC.swift */,
-				DDB19D9C1E38853200572212 /* MainVC.swift */,
+				DDB19DA01E391DEF00572212 /* MainVC */,
 			);
 			name = "View Controllers (VC)";
 			sourceTree = "<group>";
@@ -167,6 +180,7 @@
 			children = (
 				DDB19D931E38714C00572212 /* Entry.storyboard */,
 				DDB19D9A1E38847300572212 /* Main.storyboard */,
+				DDB19D761E386A0700572212 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -174,6 +188,7 @@
 		DDB19D901E38700A00572212 /* Designables */ = {
 			isa = PBXGroup;
 			children = (
+				DDB19DA71E3934C000572212 /* DesignableView.swift */,
 			);
 			name = Designables;
 			sourceTree = "<group>";
@@ -184,6 +199,40 @@
 				DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		DDB19DA01E391DEF00572212 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				DDB19D9C1E38853200572212 /* MainVC.swift */,
+				DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */,
+			);
+			name = MainVC;
+			sourceTree = "<group>";
+		};
+		DDB19DA91E39B70800572212 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DDB19DAA1E39B71100572212 /* MainCollectionViewCells */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		DDB19DAA1E39B71100572212 /* MainCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */,
+				DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */,
+			);
+			name = MainCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		DDB19DAB1E39B71E00572212 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				DDB19D9E1E391D3500572212 /* MainView.swift */,
+			);
+			name = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +293,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9ME882KZTA;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					DDB19D7D1E386A0700572212 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -278,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB19D781E386A0700572212 /* LaunchScreen.storyboard in Resources */,
+				DDB19DA61E391F1F00572212 /* MainCollectionViewCell.xib in Resources */,
 				DDB19D9B1E38847300572212 /* Main.storyboard in Resources */,
 				DDB19D921E3870B200572212 /* GoogleService-Info.plist in Resources */,
 				DDB19D941E38714C00572212 /* Entry.storyboard in Resources */,
@@ -392,11 +447,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB19DA41E391E8800572212 /* MainCollectionViewCell.swift in Sources */,
 				DDB19D9D1E38853200572212 /* MainVC.swift in Sources */,
+				DDB19D9F1E391D3500572212 /* MainView.swift in Sources */,
 				DDB19D731E386A0700572212 /* Tour.xcdatamodeld in Sources */,
 				DDB19D6D1E386A0700572212 /* LoginVC.swift in Sources */,
 				DDB19D961E38731D00572212 /* SignUpVC.swift in Sources */,
 				DDB19D6B1E386A0700572212 /* AppDelegate.swift in Sources */,
+				DDB19DA21E391DFC00572212 /* MainVC+CollectionView.swift in Sources */,
+				DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */,
 				DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +588,7 @@
 			baseConfigurationReference = 752F1F2E85DDA06A5C9E7BFF /* Pods-Tour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tour/Tour.entitlements;
 				DEVELOPMENT_TEAM = 9ME882KZTA;
 				INFOPLIST_FILE = Tour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -543,6 +603,7 @@
 			baseConfigurationReference = 98E8DFD2FBFC59AC15E1F661 /* Pods-Tour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tour/Tour.entitlements;
 				DEVELOPMENT_TEAM = 9ME882KZTA;
 				INFOPLIST_FILE = Tour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
