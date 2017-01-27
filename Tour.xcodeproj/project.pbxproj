@@ -20,12 +20,17 @@
 		DDB19D961E38731D00572212 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D951E38731D00572212 /* SignUpVC.swift */; };
 		DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */; };
 		DDB19D9B1E38847300572212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19D9A1E38847300572212 /* Main.storyboard */; };
-		DDB19D9D1E38853200572212 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D9C1E38853200572212 /* MainVC.swift */; };
 		DDB19D9F1E391D3500572212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D9E1E391D3500572212 /* MainView.swift */; };
 		DDB19DA21E391DFC00572212 /* MainVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */; };
 		DDB19DA41E391E8800572212 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */; };
 		DDB19DA61E391F1F00572212 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */; };
 		DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA71E3934C000572212 /* DesignableView.swift */; };
+		DDB19DB21E3B0D2100572212 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DB11E3B0D2100572212 /* MessageVC.swift */; };
+		DDB19DB41E3B1C1E00572212 /* ListOfFollowersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DB31E3B1C1E00572212 /* ListOfFollowersVC.swift */; };
+		DDB19DB61E3B1C6900572212 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DB51E3B1C6900572212 /* ProfileVC.swift */; };
+		DDB19DB81E3B1D4100572212 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19DB71E3B1D4100572212 /* Profile.storyboard */; };
+		DDB19DBA1E3B27E300572212 /* UIView+InstantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DB91E3B27E300572212 /* UIView+InstantiateVC.swift */; };
+		DDB19DBC1E3B33EC00572212 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DBB1E3B33EC00572212 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +64,18 @@
 		DDB19D951E38731D00572212 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+InstantiateVC.swift"; sourceTree = "<group>"; };
 		DDB19D9A1E38847300572212 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DDB19D9C1E38853200572212 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		DDB19D9E1E391D3500572212 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+CollectionView.swift"; sourceTree = "<group>"; };
 		DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 		DDB19DA71E3934C000572212 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		DDB19DAC1E39C1F900572212 /* Tour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tour.entitlements; sourceTree = "<group>"; };
+		DDB19DB11E3B0D2100572212 /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
+		DDB19DB31E3B1C1E00572212 /* ListOfFollowersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfFollowersVC.swift; sourceTree = "<group>"; };
+		DDB19DB51E3B1C6900572212 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		DDB19DB71E3B1D4100572212 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DDB19DB91E3B27E300572212 /* UIView+InstantiateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+InstantiateVC.swift"; sourceTree = "<group>"; };
+		DDB19DBB1E3B33EC00572212 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		EDE546BF86E72A5130C69D24 /* Pods_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +180,9 @@
 			children = (
 				DDB19D6C1E386A0700572212 /* LoginVC.swift */,
 				DDB19D951E38731D00572212 /* SignUpVC.swift */,
+				DDB19DB11E3B0D2100572212 /* MessageVC.swift */,
+				DDB19DB31E3B1C1E00572212 /* ListOfFollowersVC.swift */,
+				DDB19DB51E3B1C6900572212 /* ProfileVC.swift */,
 				DDB19DA01E391DEF00572212 /* MainVC */,
 			);
 			name = "View Controllers (VC)";
@@ -180,6 +193,7 @@
 			children = (
 				DDB19D931E38714C00572212 /* Entry.storyboard */,
 				DDB19D9A1E38847300572212 /* Main.storyboard */,
+				DDB19DB71E3B1D4100572212 /* Profile.storyboard */,
 				DDB19D761E386A0700572212 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
@@ -197,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */,
+				DDB19DB91E3B27E300572212 /* UIView+InstantiateVC.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -204,7 +219,7 @@
 		DDB19DA01E391DEF00572212 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				DDB19D9C1E38853200572212 /* MainVC.swift */,
+				DDB19DBB1E3B33EC00572212 /* MainVC.swift */,
 				DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */,
 			);
 			name = MainVC;
@@ -336,6 +351,7 @@
 				DDB19D9B1E38847300572212 /* Main.storyboard in Resources */,
 				DDB19D921E3870B200572212 /* GoogleService-Info.plist in Resources */,
 				DDB19D941E38714C00572212 /* Entry.storyboard in Resources */,
+				DDB19DB81E3B1D4100572212 /* Profile.storyboard in Resources */,
 				DDB19D751E386A0700572212 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,16 +463,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB19DBA1E3B27E300572212 /* UIView+InstantiateVC.swift in Sources */,
 				DDB19DA41E391E8800572212 /* MainCollectionViewCell.swift in Sources */,
-				DDB19D9D1E38853200572212 /* MainVC.swift in Sources */,
+				DDB19DB61E3B1C6900572212 /* ProfileVC.swift in Sources */,
 				DDB19D9F1E391D3500572212 /* MainView.swift in Sources */,
+				DDB19DB41E3B1C1E00572212 /* ListOfFollowersVC.swift in Sources */,
 				DDB19D731E386A0700572212 /* Tour.xcdatamodeld in Sources */,
+				DDB19DB21E3B0D2100572212 /* MessageVC.swift in Sources */,
 				DDB19D6D1E386A0700572212 /* LoginVC.swift in Sources */,
 				DDB19D961E38731D00572212 /* SignUpVC.swift in Sources */,
 				DDB19D6B1E386A0700572212 /* AppDelegate.swift in Sources */,
 				DDB19DA21E391DFC00572212 /* MainVC+CollectionView.swift in Sources */,
 				DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */,
 				DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */,
+				DDB19DBC1E3B33EC00572212 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

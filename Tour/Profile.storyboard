@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ProfileVC-->
+        <scene sceneID="Bsh-lX-b0I">
+            <objects>
+                <viewController storyboardIdentifier="ProfileVC" id="eEb-tr-G3p" customClass="ProfileVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gj2-Iu-An0"/>
+                        <viewControllerLayoutGuide type="bottom" id="XZ8-66-o9u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oTQ-gr-SXC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3p-cX-kge">
+                                <rect key="frame" x="135.5" y="23" width="103.5" height="35.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Followers"/>
+                                <connections>
+                                    <action selector="followersButtonAction:" destination="eEb-tr-G3p" eventType="touchUpInside" id="R84-G2-ugO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbI-4Y-atB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132.5" y="208.09859154929578"/>
+        </scene>
+        <!--List Of FollowersVC-->
+        <scene sceneID="8Sv-sR-7eD">
+            <objects>
+                <viewController storyboardIdentifier="ListOfFollowersVC" id="5em-oe-A6N" customClass="ListOfFollowersVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zY3-ZV-tIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oko-W7-7M2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cbv-xi-M5e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVR-02-LcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="898"/>
+        </scene>
+    </scenes>
+</document>
