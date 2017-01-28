@@ -33,7 +33,6 @@ class MainVC: UIViewController {
     
     // Adds the tap gesture onto the profile picture
     func profilePictureSetup() {
-        
         // Allows user interaction
         profilePicture.isUserInteractionEnabled = true
         

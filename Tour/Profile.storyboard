@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="1132.5" y="208.09859154929578"/>
         </scene>
-        <!--List Of FollowersVC-->
+        <!--FollowersVC-->
         <scene sceneID="8Sv-sR-7eD">
             <objects>
-                <viewController storyboardIdentifier="ListOfFollowersVC" id="5em-oe-A6N" customClass="ListOfFollowersVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FollowersVC" id="5em-oe-A6N" customClass="FollowersVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zY3-ZV-tIp"/>
                         <viewControllerLayoutGuide type="bottom" id="Oko-W7-7M2"/>
@@ -53,10 +53,17 @@
                                 <rect key="frame" x="0.0" y="151" width="414" height="585"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5em-oe-A6N" id="0nO-bE-Yes"/>
+                                    <outlet property="delegate" destination="5em-oe-A6N" id="7tl-mz-XpF"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Twm-as-66j" id="OV3-ua-Nbs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVR-02-LcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

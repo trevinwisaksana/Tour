@@ -16,7 +16,8 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func followersButtonAction(_ sender: Any) {
-        self.instantiateViewController(file: "Profile", identifier: "ListOfFollowersVC")
+        self.instantiateViewController(file: "Profile",
+                                       identifier: "FollowersVC")
     }
     
     
