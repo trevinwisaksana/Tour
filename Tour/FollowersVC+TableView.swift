@@ -30,6 +30,16 @@ extension FollowersVC: UITableViewDataSource, UITableViewDelegate {
         cell.userNameLabel.text = elementAtIndex.fullName
         cell.userID = elementAtIndex.userID
         
+        // Makes sure the check mark works with persistency
+        checkFollowing(indexPath: indexPath)
+        
+        // Checks if the follow button is which
+        if isFollowing {
+            cell.followerStateButton.titleLabel?.text = "Follow"
+        } else {
+            cell.followerStateButton.titleLabel?.text = "Unfollow"
+        }
+        
         return cell
         
     }
@@ -46,41 +56,78 @@ extension FollowersVC: UITableViewDataSource, UITableViewDelegate {
         // Key is something unique everytime its called
         let key = reference.child("users").childByAutoId().key
         
-        // Check if the current user is currently following the user selected
-        var isFollower = false
-        
+        // Resets the follow button state
+        isFollowing = false
+      
         // Observes the value of whether the user is following the person or not
         reference.child("users").child(uid!).child("following").queryOrderedByKey().observeSingleEvent(of: .value, with: { [weak self](snapshot) in
             
-            guard let following = snapshot.value as? [String : AnyObject] else {
-                // No followers
-                
-            }
-            
-            // Checks throught the dictionary
-            for (key, value) in following {
-                if value as? String == self.user[indexPath.row].userID {
-                    
-                    // Making it easier to read
-                    let userReference = reference.child("users")
-                    
-                    // Changes to a follower
-                    isFollower = true
-                    
-                    // Removing the user that we're following
-                    userReference.child(uid).child("following/\(key)").removeValue()
-                    // Removing the follower
-                    userReference.child(self.user[indexPath.row].userID).child("followers/\(key)").removeValue()
-                    
-                    // TODO: Make the check mark
+            if let following = snapshot.value as? [String : AnyObject] {
+                // Checks throught the dictionary
+                for (_key, value) in following {
+                    if value as? String == self?.listOfUsers[indexPath.row].userID {
+                        
+                        // Making it easier to read
+                        let userReference = reference.child("users")
+                        let userID = self?.listOfUsers[indexPath.row].userID
+                        
+                        // Changes to a follower
+                        self?.isFollowing = true
+                        
+                        // Removing the user that we're following
+                        userReference.child(uid!).child("following/\(_key)").removeValue()
+                        // Removing the follower
+                        userReference.child(userID!).child("followers/\(_key)").removeValue()
+                       
+                        // Removes the check mark if unfollowed
+                        tableView.cellForRow(at: indexPath)?.accessoryType = .none
+                        
+                    }
                 }
+
             }
             
-            
-            
+            // Follow the user
+            if (self?.isFollowing)! == false {
+                let following = ["following/\(key)" : self?.listOfUsers[indexPath.row].userID]
+                let followers = ["followers/\(key)" : uid]
+                let _userID = self?.listOfUsers[indexPath.row].userID
+                
+                // Update the value
+                reference.child("users").child(uid!).updateChildValues(following)
+                reference.child("users").child(_userID!).updateChildValues(followers)
+                
+                // Shows the check mark if followed
+                tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            }
+        
         })
         
+        reference.removeAllObservers()
         
+    }
+    
+    // TODO: Not DRY code
+    func checkFollowing(indexPath: IndexPath) {
+        // Unique ID of the user
+        let uid = FIRAuth.auth()?.currentUser?.uid
+        // Reference of the Firebase database
+        let reference = FIRDatabase.database().reference()
+        // Observes the value of whether the user is following the person or not
+        reference.child("users").child(uid!).child("following").queryOrderedByKey().observeSingleEvent(of: .value, with: { [weak self](snapshot) in
+            
+            if let following = snapshot.value as? [String : AnyObject] {
+                // Checks throught the dictionary
+                for (_, value) in following {
+                    if value as? String == self?.listOfUsers[indexPath.row].userID {
+                        self?.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+                    }
+                }
+            }
+        })
+        
+        reference.removeAllObservers()
+    
     }
     
 }

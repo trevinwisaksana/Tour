@@ -16,19 +16,27 @@ class FollowersVC: UIViewController {
     
     // List of users array
     var listOfUsers: [User] = []
+    // Used to change the title of cell
+    var followerStatus: String! = "Follow"
+    // Used to check the state of follower
+    var isFollowing: Bool = false
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+         retrieveUsers()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        retrieveUsers()
         
     }
     
     private func retrieveUsers() {
         let reference = FIRDatabase.database().reference()
-        reference.child("users").queryOrderedByKey().observeSingleEvent(of: .value, with: { [weak self](snapshot) in
+        reference.child("users").queryOrderedByKey().observeSingleEvent(of: .value, with: { [unowned self](snapshot) in
             
             // Prevents duplicated values
-            self?.listOfUsers.removeAll()
+            self.listOfUsers.removeAll()
             
             /// Swift doesn't know what snapshot is so we have to cast it into its data type
             // - String is going to be the key
@@ -46,19 +54,19 @@ class FollowersVC: UIViewController {
                 // Checks if the user querried is not the current user, append it
                 if uid != FIRAuth.auth()?.currentUser?.uid {
                     let user = User(userID: uid, fullName: name, imagePath: nil, email: email)
-                    self?.listOfUsers.append(user)
+                    self.listOfUsers.append(user)
                 }
                 
             }
             
             // Refreshes the table view
-            self?.tableView.reloadData()
+            self.tableView.reloadData()
             
         })
         
         // Prevents memory leak
-        // Even though we're already using weak self, it's still good practice
-        reference.removeAllObservers()
+        // Even though we're already using unowned self, so it automatically deallocates the reference it's still good practice
+        // reference.removeAllObservers()
         
     }
     

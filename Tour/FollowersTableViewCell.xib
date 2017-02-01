@@ -22,9 +22,6 @@
                         <rect key="frame" x="277" y="38" width="73" height="29.5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Follow"/>
-                        <connections>
-                            <action selector="followButtonAction:" destination="Emw-mY-zby" eventType="touchUpInside" id="jQT-Lx-Pjq"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wb-gi-J5y">
                         <rect key="frame" x="72" y="31" width="201" height="44"/>
@@ -36,6 +33,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="followerStateButton" destination="sZ6-Dt-vRX" id="yQ6-zy-8Lt"/>
                 <outlet property="userNameLabel" destination="5wb-gi-J5y" id="xMI-oJ-uLn"/>
             </connections>
             <point key="canvasLocation" x="55.5" y="111"/>

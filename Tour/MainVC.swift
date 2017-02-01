@@ -11,18 +11,26 @@ import UIKit
 class MainVC: UIViewController {
     
     @IBOutlet weak var profilePicture: UIImageView!
-
+    
+    @IBOutlet weak var postView: DesignableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Tap gesture used to open the profile view
-        let tapGesture = UITapGestureRecognizer(target: self,
-                                                action: #selector(tapGestureHelper(gesture:)))
-        
-        profilePicture.addGestureRecognizer(tapGesture)
-        
         // Allows the profile picture view to insantiate view controller
-        profilePictureSetup()
+        // Tap gesture used to open the profile view
+        // Tap gesture has to be placed here
+        let profileTapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(profileTapGestureHelper(gesture:)))
+        // Add gesture for the profile image
+        profilePicture.addGestureRecognizer(profileTapGesture)
         
+        // Post view tap gesture with selector
+        let postViewTapGesture = UITapGestureRecognizer(target: self,
+                                                        action: #selector(postViewTapGestureHelper(gesture:)))
+        // Adds gesture for the postView
+        postView.addGestureRecognizer(postViewTapGesture)
+        
+        circularProfilePictureHelper(for: profilePicture)
     }
     
     // Instantiates the message view controller
@@ -31,21 +39,27 @@ class MainVC: UIViewController {
                                        identifier: "MessageVC")
     }
     
-    // Adds the tap gesture onto the profile picture
-    func profilePictureSetup() {
+    // Adds the tap gesture onto the post profile picture
+    func circularProfilePictureHelper(for image: UIImageView) {
         // Allows user interaction
-        profilePicture.isUserInteractionEnabled = true
-        
+        image.isUserInteractionEnabled = true
         // Creating a circular profile image
-        profilePicture.layer.cornerRadius = profilePicture.frame.width / 2
+        image.layer.cornerRadius = image.frame.width / 2
         // Crops the image from the circular border
-        profilePicture.layer.masksToBounds = true
+        image.layer.masksToBounds = true
     }
     
-    // Gesture recognizer setup
-    func tapGestureHelper(gesture: UITapGestureRecognizer) {
+    // Profile gesture recognizer setup
+    func profileTapGestureHelper(gesture: UITapGestureRecognizer) {
         self.instantiateViewController(file: "Profile",
                                        identifier: "ProfileVC")
     }
+    
+    // View gesture recognizer setup
+    func postViewTapGestureHelper(gesture: UITapGestureRecognizer) {
+        self.instantiateViewController(file: "Main",
+                                       identifier: "PostVC")
+    }
+
 
 }

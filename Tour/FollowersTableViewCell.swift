@@ -14,8 +14,6 @@ class FollowersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userNameLabel: UILabel!
     
-    @IBAction func followButtonAction(_ sender: UIButton) {
-        
-    }
+    @IBOutlet weak var followerStateButton: UIButton!
     
 }
