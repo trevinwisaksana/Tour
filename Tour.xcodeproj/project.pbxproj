@@ -27,7 +27,6 @@
 		DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */; };
 		DDB19D9B1E38847300572212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19D9A1E38847300572212 /* Main.storyboard */; };
 		DDB19D9F1E391D3500572212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D9E1E391D3500572212 /* MainView.swift */; };
-		DDB19DA21E391DFC00572212 /* MainVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */; };
 		DDB19DA41E391E8800572212 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */; };
 		DDB19DA61E391F1F00572212 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */; };
 		DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA71E3934C000572212 /* DesignableView.swift */; };
@@ -76,7 +75,6 @@
 		DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+InstantiateVC.swift"; sourceTree = "<group>"; };
 		DDB19D9A1E38847300572212 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DDB19D9E1E391D3500572212 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+CollectionView.swift"; sourceTree = "<group>"; };
 		DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 		DDB19DA71E3934C000572212 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				DDB19DBB1E3B33EC00572212 /* MainVC.swift */,
-				DDB19DA11E391DFC00572212 /* MainVC+CollectionView.swift */,
 			);
 			name = MainVC;
 			sourceTree = "<group>";
@@ -525,7 +522,6 @@
 				DDB19D961E38731D00572212 /* SignUpVC.swift in Sources */,
 				DDB19D6B1E386A0700572212 /* AppDelegate.swift in Sources */,
 				DD170BCB1E3BD191001E86C6 /* FollowersVC+TableView.swift in Sources */,
-				DDB19DA21E391DFC00572212 /* MainVC+CollectionView.swift in Sources */,
 				DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */,
 				DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */,
 				DDB19DBC1E3B33EC00572212 /* MainVC.swift in Sources */,

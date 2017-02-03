@@ -15,6 +15,4 @@ class PostVC: UIViewController {
         
     }
     
-    @IBAction func unwindToMainVC(segue: UIStoryboardSegue) {}
-    
 }

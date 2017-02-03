@@ -14,6 +14,10 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var postView: DesignableView!
     
+    @IBAction func unwindToMainVC(withUnwindSegue unwindSegue: UIStoryboardSegue) {
+        _ = unwindSegue.source
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Allows the profile picture view to insantiate view controller
@@ -60,6 +64,45 @@ class MainVC: UIViewController {
         self.instantiateViewController(file: "Main",
                                        identifier: "PostVC")
     }
-
-
+    
 }
+
+
+
+// MARK: - CollectionView
+// WARNING: DO NOT PUT EXTENSION IN A DIFFERENT FILE BECAUSE UNWIND SEGUE WOULD NOT WORK
+// Responsible for CollectionView setup
+extension MainVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    // MARK: - Data Source
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // nibFile references the Main cell nib file
+        let nibFile = UINib(nibName: "MainCollectionViewCell", bundle: nil)
+        // Registers the nib file
+        collectionView.register(nibFile, forCellWithReuseIdentifier: "postCell")
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! MainCollectionViewCell
+        
+        return cell
+        
+    }
+    
+    // MARK: - Flow Layout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Size of the cell
+        return CGSize(width: self.view.frame.width, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        // Spacing between the cells
+        return CGFloat(0)
+    }
+    
+    
+    
+}
+
