@@ -15,6 +15,8 @@
 		DD170BCE1E3BD99C001E86C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD170BCD1E3BD99C001E86C6 /* User.swift */; };
 		DD170BD01E3C35CF001E86C6 /* UIView+RetrieveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD170BCF1E3C35CF001E86C6 /* UIView+RetrieveImage.swift */; };
 		DD2AEB461E406B9700C98009 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AEB451E406B9700C98009 /* PostVC.swift */; };
+		DD9EB7421E44E62C007BBCF0 /* MainVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9EB7411E44E62C007BBCF0 /* MainVC+CollectionView.swift */; };
+		DD9EB7441E44E702007BBCF0 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9EB7431E44E702007BBCF0 /* PostView.swift */; };
 		DDB19D6B1E386A0700572212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D6A1E386A0700572212 /* AppDelegate.swift */; };
 		DDB19D6D1E386A0700572212 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D6C1E386A0700572212 /* LoginVC.swift */; };
 		DDB19D731E386A0700572212 /* Tour.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D711E386A0700572212 /* Tour.xcdatamodeld */; };
@@ -26,7 +28,6 @@
 		DDB19D961E38731D00572212 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D951E38731D00572212 /* SignUpVC.swift */; };
 		DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */; };
 		DDB19D9B1E38847300572212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19D9A1E38847300572212 /* Main.storyboard */; };
-		DDB19D9F1E391D3500572212 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19D9E1E391D3500572212 /* MainView.swift */; };
 		DDB19DA41E391E8800572212 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */; };
 		DDB19DA61E391F1F00572212 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */; };
 		DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DA71E3934C000572212 /* DesignableView.swift */; };
@@ -35,6 +36,7 @@
 		DDB19DB61E3B1C6900572212 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DB51E3B1C6900572212 /* ProfileVC.swift */; };
 		DDB19DB81E3B1D4100572212 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB19DB71E3B1D4100572212 /* Profile.storyboard */; };
 		DDB19DBC1E3B33EC00572212 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB19DBB1E3B33EC00572212 /* MainVC.swift */; };
+		DDC0FCA11E482E8300AAB658 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0FCA01E482E8300AAB658 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		DD170BCD1E3BD99C001E86C6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD170BCF1E3C35CF001E86C6 /* UIView+RetrieveImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RetrieveImage.swift"; sourceTree = "<group>"; };
 		DD2AEB451E406B9700C98009 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		DD9EB7411E44E62C007BBCF0 /* MainVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+CollectionView.swift"; sourceTree = "<group>"; };
+		DD9EB7431E44E702007BBCF0 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		DDB19D671E386A0700572212 /* Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB19D6A1E386A0700572212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB19D6C1E386A0700572212 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 		DDB19D951E38731D00572212 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		DDB19D981E38812C00572212 /* UIViewController+InstantiateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+InstantiateVC.swift"; sourceTree = "<group>"; };
 		DDB19D9A1E38847300572212 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DDB19D9E1E391D3500572212 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DDB19DA31E391E8800572212 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDB19DA51E391F1F00572212 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 		DDB19DA71E3934C000572212 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		DDB19DB51E3B1C6900572212 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		DDB19DB71E3B1D4100572212 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DDB19DBB1E3B33EC00572212 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		DDC0FCA01E482E8300AAB658 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EDE546BF86E72A5130C69D24 /* Pods_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DD170BCD1E3BD99C001E86C6 /* User.swift */,
+				DDC0FCA01E482E8300AAB658 /* Post.swift */,
 			);
 			name = DataModels;
 			sourceTree = "<group>";
@@ -213,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				DD170BC51E3BAD04001E86C6 /* TableViewCells */,
-				DDB19DAB1E39B71E00572212 /* MainView */,
+				DDB19DAB1E39B71E00572212 /* PostView */,
 				DDB19DA91E39B70800572212 /* CollectionViewCells */,
 			);
 			name = Views;
@@ -265,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB19DBB1E3B33EC00572212 /* MainVC.swift */,
+				DD9EB7411E44E62C007BBCF0 /* MainVC+CollectionView.swift */,
 			);
 			name = MainVC;
 			sourceTree = "<group>";
@@ -286,12 +292,12 @@
 			name = MainCollectionViewCells;
 			sourceTree = "<group>";
 		};
-		DDB19DAB1E39B71E00572212 /* MainView */ = {
+		DDB19DAB1E39B71E00572212 /* PostView */ = {
 			isa = PBXGroup;
 			children = (
-				DDB19D9E1E391D3500572212 /* MainView.swift */,
+				DD9EB7431E44E702007BBCF0 /* PostView.swift */,
 			);
-			name = MainView;
+			name = PostView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,10 +516,10 @@
 			files = (
 				DDB19DA41E391E8800572212 /* MainCollectionViewCell.swift in Sources */,
 				DDB19DB61E3B1C6900572212 /* ProfileVC.swift in Sources */,
-				DDB19D9F1E391D3500572212 /* MainView.swift in Sources */,
 				DD170BD01E3C35CF001E86C6 /* UIView+RetrieveImage.swift in Sources */,
 				DDB19DB41E3B1C1E00572212 /* FollowersVC.swift in Sources */,
 				DD170BCE1E3BD99C001E86C6 /* User.swift in Sources */,
+				DD9EB7421E44E62C007BBCF0 /* MainVC+CollectionView.swift in Sources */,
 				DD2AEB461E406B9700C98009 /* PostVC.swift in Sources */,
 				DD170BC41E3BACBC001E86C6 /* FollowersTableViewCell.swift in Sources */,
 				DDB19D731E386A0700572212 /* Tour.xcdatamodeld in Sources */,
@@ -524,6 +530,8 @@
 				DD170BCB1E3BD191001E86C6 /* FollowersVC+TableView.swift in Sources */,
 				DDB19DA81E3934C000572212 /* DesignableView.swift in Sources */,
 				DDB19D991E38812C00572212 /* UIViewController+InstantiateVC.swift in Sources */,
+				DD9EB7441E44E702007BBCF0 /* PostView.swift in Sources */,
+				DDC0FCA11E482E8300AAB658 /* Post.swift in Sources */,
 				DDB19DBC1E3B33EC00572212 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

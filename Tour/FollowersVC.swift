@@ -66,7 +66,7 @@ class FollowersVC: UIViewController {
         
         // Prevents memory leak
         // Even though we're already using unowned self, so it automatically deallocates the reference it's still good practice
-        // reference.removeAllObservers()
+        reference.removeAllObservers()
         
     }
     

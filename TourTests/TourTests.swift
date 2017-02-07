@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Tour
+// @testable import Tour
 
 class TourTests: XCTestCase {
     

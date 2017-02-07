@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzc-ky-Iv0">
                                 <rect key="frame" x="20.5" y="36.5" width="78" height="38.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.8812854663891192" green="0.23763318616866241" blue="0.27271746965517135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -39,14 +39,27 @@
                                     <segue destination="KA9-4i-QIx" kind="unwind" unwindAction="unwindToMainVCWithUnwindSegue:" id="U8x-4R-GQH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6R-08-Mj0">
+                                <rect key="frame" x="178" y="381" width="58" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postButtonAction:" destination="R8a-yN-Jix" eventType="touchUpInside" id="LAe-2K-80w"/>
+                                    <segue destination="KA9-4i-QIx" kind="unwind" unwindAction="unwindToMainVCWithUnwindSegue:" id="YR1-O0-Xfd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="userStatusTextView" destination="Ksc-bx-hgv" id="jmv-y9-b5l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lab-3y-eB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KA9-4i-QIx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="-497"/>
+            <point key="canvasLocation" x="1150.7246376811595" y="-497.28260869565219"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="Yxe-ZW-blG">
@@ -74,6 +87,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="ik1-9Y-MlN" id="t9w-9F-Wgv"/>
                                     <outlet property="delegate" destination="ik1-9Y-MlN" id="Svi-dH-7ac"/>
+                                    <outlet property="prefetchDataSource" destination="ik1-9Y-MlN" id="xeu-e6-gpf"/>
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXm-wY-0VS">
@@ -158,6 +172,7 @@
                     <navigationItem key="navigationItem" id="0we-IR-xhg"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="nUl-Hy-7i9" id="e3V-XO-o2T"/>
                         <outlet property="postView" destination="xH8-bK-IZn" id="XCt-Yc-p8T"/>
                         <outlet property="profilePicture" destination="cJC-9N-Ox7" id="F0n-YO-Z1x"/>
                     </connections>
@@ -169,7 +184,7 @@
         <!--MessageVC-->
         <scene sceneID="53S-bp-yuP">
             <objects>
-                <viewController storyboardIdentifier="MessageVC" modalTransitionStyle="crossDissolve" id="Ara-wc-ePd" customClass="MessageVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageVC" id="Ara-wc-ePd" customClass="MessageVC" customModule="Tour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Md4-WA-ID5"/>
                         <viewControllerLayoutGuide type="bottom" id="Ewa-Kr-Hos"/>
@@ -177,12 +192,24 @@
                     <view key="view" contentMode="scaleToFill" id="Z39-Jy-5vE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8p-5e-5K0">
+                                <rect key="frame" x="20" y="28" width="69" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="yet-Ih-Wj9" kind="unwind" unwindAction="unwindToMainVCWithUnwindSegue:" id="LKG-D0-BL0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hzu-Bo-ndf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yet-Ih-Wj9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="893"/>
+            <point key="canvasLocation" x="1150.7246376811595" y="892.66304347826099"/>
         </scene>
     </scenes>
     <resources>
